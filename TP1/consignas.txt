@@ -1,0 +1,14 @@
+Trabajo Práctico 1
+
+Crear dentro del directorio "TP1" una carpeta con Apellido y nombre, con la siguiente nomenclatura y arbol de directorios:
+
+ApellidoNombre
+--------------ProductorConsumidor
+--------------FilosofosChinos
+--------------LectoresyEscritores
+--------------SemaforosJava
+
+1) Productor consumidor con buffer circular.
+2) Filósofos chinos.
+3) Lectores y escritores. El lector no consume el dato, lo lee y sigue estando disponible.
+4) Implementación de semáforos con primitivas de Java.
