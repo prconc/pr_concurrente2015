@@ -36,7 +36,12 @@ public class Buffer
 			}
 			
 				escritor = true;
+		}
+		
 				System.out.println("(" + lectores + "|" + escritor + ") El escritor " + Thread.currentThread().getName() + " está escribiendo *" + palabra + "*");
+		
+		synchronized(this)
+		{
 				buffer.add(palabra);
 				
 				try
@@ -51,6 +56,7 @@ public class Buffer
 				System.out.println("(" + lectores + "|" + escritor + ") El escritor " + Thread.currentThread().getName() + " terminó de escribir *" + palabra + "* \n");
 				escritor = false;
 				notifyAll();
+	
 		}
 	}
 		
@@ -59,7 +65,7 @@ public class Buffer
 	{
 		synchronized(this)
 		{
-			while(escritor || buffer.isEmpty() || escritoresEsperando>0)
+			while(escritor || buffer.isEmpty())// || escritoresEsperando>0)
 			{
 				try
 				{
