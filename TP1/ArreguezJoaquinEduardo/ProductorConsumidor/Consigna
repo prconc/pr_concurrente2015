@@ -1,0 +1,13 @@
+Productor Consumidor:
+
+Se tiene un buffer de números enteros una capacidad máxima de 100 elementos.
+
+Existen 4 threads productores que depositan un número.
+
+Los 4 threads consumidores leen el dato del buffer y lo sacan del mismo.
+
+Cada thread duerme 100 ms.
+
+Un productor no puede agregar datos al buffer si este está lleno,
+
+de la misma forma un consumidor no puede sacar un dato del buffer si este esta vacio.
