@@ -15,6 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		//se crean dos vectores, uno de 5 filosofos y el otro de 5 palillos
 		Filosofo filosofos[] = new Filosofo[cantidadFilosofos];
 		Palillo palillos[] = new Palillo[cantidadFilosofos];
 		
@@ -28,6 +29,7 @@ public class Main {
 			
 		}
 		
+		//se asignan a cada filosofo dos palillos, el de su derecha y el de su izquierda
 		for(int i = 0; i< cantidadFilosofos; i++){
 			
 			filosofos[i] = new Filosofo(i, palillos[i], palillos[(i+1)%cantidadFilosofos], contador);

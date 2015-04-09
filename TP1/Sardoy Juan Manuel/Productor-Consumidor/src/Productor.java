@@ -25,7 +25,9 @@ public class Productor implements Runnable {
 				e.printStackTrace();
 			}
 			buff.Print();
-			//System.out.println(buff.counter);
+			
+			
+			//sleep random entre 10 y 100 milisegundos
 			try {	
 				int t =10+ (int)(Math.random()*(101));
 				Thread.sleep(t);

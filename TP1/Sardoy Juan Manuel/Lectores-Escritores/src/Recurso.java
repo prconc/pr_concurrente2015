@@ -5,6 +5,9 @@ public class Recurso {
 	boolean hayEscritor;
 	int numLectores;
 	
+	
+	//el recurso es un entero, el escritor escribe un numero entre 0 y 10
+	// y el lector simplemente lo lee y lo imprime en consola.
 	public Recurso(){
 		recurso = 0;
 		hayEscritor = false;

@@ -33,6 +33,8 @@ public  class Filosofo implements Runnable {
 			
 			System.out.println(String.format("filosofo %s comiendo",id));
 			
+			
+			//sleep entre 500 y 1000 milisegundos (lo que se tardaria en comer)
 			try {
 				Thread.sleep(500+(int)Math.random()*1000);
 			} catch (InterruptedException e) {
@@ -41,9 +43,9 @@ public  class Filosofo implements Runnable {
 			}
 			
 			izquierdo.soltar();
-			synchronized(this){
-				System.out.println(String.format("filosofo %s termino de comer",id));
-			}
+			
+			System.out.println(String.format("filosofo %s termino de comer",id));
+			
 			derecho.soltar();
 			
 			contador.decrementar();
