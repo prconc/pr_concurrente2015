@@ -13,8 +13,9 @@ public class Semaforo {
 			try {
 				this.wait();	
 			} catch (Exception e) {}
-			this.contador--;
 		}
+			this.contador--;
+		
 	}
 	
 	
