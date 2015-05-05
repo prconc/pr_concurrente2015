@@ -9,9 +9,9 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Olla olla = new Olla(2, 10);
+		Olla olla = new Olla(0, 10);
 		
-		Monitor mon=new Monitor(olla);//Le doy control de la olla
+		MonitorInterface mon=new MonitorSem(olla);//Le doy control de la olla
 		
 		Salvaje [] s1 = new Salvaje[5];
 
@@ -26,7 +26,7 @@ public class Main {
 			s1[i].start();
 		}
 
-		for(int i=0; i<5; i++){
+		for(int i=0; i<5; i++){//Esperar a q todos los salvajes terminen de comer
 
 			try {
 				s1[i].join();

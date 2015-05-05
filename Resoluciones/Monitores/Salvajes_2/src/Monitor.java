@@ -3,7 +3,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 
-public class Monitor {
+public class Monitor implements MonitorInterface {
 
 
 	Olla olla;
@@ -17,6 +17,10 @@ public class Monitor {
 		this.olla=olla;
 	}
 
+	/* (non-Javadoc)
+	 * @see MonitorInterface#cocinar()
+	 */
+	@Override
 	public void cocinar() throws InterruptedException {
 		lock.lock();
 		try{
@@ -36,6 +40,10 @@ public class Monitor {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see MonitorInterface#comer()
+	 */
+	@Override
 	public void comer() throws InterruptedException {
 		lock.lock();
 		try{

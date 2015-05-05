@@ -1,9 +1,9 @@
 
 public class Cocinero extends Thread{
 
-	Monitor olla;
+	MonitorInterface olla;
 
-	public void setOlla(Monitor olla) {
+	public void setOlla(MonitorInterface olla) {
 		this.olla = olla;
 	}
 
@@ -12,6 +12,7 @@ public class Cocinero extends Thread{
 			try {
 				Thread.sleep(50);
 				olla.cocinar();
+				System.out.println("c"+i);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
