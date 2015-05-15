@@ -7,7 +7,7 @@ public class Monitor implements MonitorInterface {
 
 
 	Olla olla;
-	private Lock lock = new ReentrantLock();			//lock para exclusión mutua
+	private Lock lock = new ReentrantLock();			//lock para exclusiï¿½n mutua
 	private Condition llenar = lock.newCondition();		//Condicion donde espera el cocinero.
 	private Condition vacia = lock.newCondition();		//condicion donde esperan los salvajes.
 	private boolean waiting=false;
@@ -44,7 +44,7 @@ public class Monitor implements MonitorInterface {
 	 * @see MonitorInterface#comer()
 	 */
 	@Override
-	public void comer() throws InterruptedException {
+	public void sacarMisionero() throws InterruptedException {
 		lock.lock();
 		try{
 

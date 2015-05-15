@@ -12,7 +12,7 @@ public class MonitorSem implements MonitorInterface {
 
 	private Olla olla;
 	
-	private Semaforo lock = new Semaforo(1,true,"lock");			//lock para exclusión mutua
+	private Semaforo lock = new Semaforo(1,true,"lock");			//lock para exclusiï¿½n mutua
 	private Semaforo llenar = new Semaforo(0,true,"llenar");			//Condicion donde espera el cocinero.
 	private Semaforo vacia=  new Semaforo(0,true,"vacia");;			//condicion donde esperan los salvajes.
 	
@@ -52,7 +52,7 @@ public class MonitorSem implements MonitorInterface {
 	 * @see MonitorInterface#comer()
 	 */
 	@Override
-	public void comer() throws InterruptedException {
+	public void sacarMisionero() throws InterruptedException {
 		lock.WAIT();
 
 		if(waiting>0) {// Si hay otros esperando no verifico simplemente espero
